@@ -16,6 +16,8 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term alacritty
+
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -24,8 +26,8 @@ set $menu wofi --show run
 
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/james/Pictures/wallpapers/web.jpg fill
+# wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+output * bg /home/james/Pictures/wallpapers/winter-norway.jpg fill
 
 # styling for windows title bars, padding, etc
 set $dark 3b4252
@@ -36,9 +38,10 @@ client.unfocused $gray $dark $white
 #
 # Example configuration:
 #
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+output DP-4 resolution 1920x1080 position 1920,0
 output eDP-1 scale 1
 output eDP-1 resolution 2256x1504 position 0,0
+#output eDP-1 mode --custom 1920x1080@60HZ 
 # output eDP-1 {
 #	mode 2256x1504@59.999Hz
 # }
@@ -95,7 +98,7 @@ exec swayidle -w \
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit?' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #

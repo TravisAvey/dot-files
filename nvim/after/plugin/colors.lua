@@ -1,10 +1,10 @@
 
-function Coloring(color)
-	color = color or "nord"	
-	vim.cmd.colorscheme(color)
+function SetColor()
+	require('nord').set()
+	vim.cmd[[colorscheme nord]]
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
-Coloring()
+SetColor()

@@ -24,7 +24,7 @@ window#waybar {
 
 #workspaces button.focused {
     color: #2e3440;
-    background-color: #88c0d0;
+    background-color: #81a1c1;
     border-radius: 5px;
 }
 
@@ -40,7 +40,7 @@ window#waybar {
 }
 
 #custom-date {
-	color: #8fbcbb;
+	color: #81a1c1;
 }
 
 #custom-power {
@@ -55,13 +55,13 @@ window#waybar {
 }
 
 #clock {
-    color: #b48ead;
+    color: #81a1c1;
     border-radius: 0px 5px 5px 0px;
     margin-right: 10px;
 }
 
 #battery {
-    color: #a3be8c;
+    color: #81a1c1;
 }
 
 @keyframes blink {
@@ -72,11 +72,11 @@ window#waybar {
 }
 
 #battery.charging {
-    color: #a3be8c;
+    color: #8fbcbb;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
+    background-color: #88c0d0;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -86,11 +86,11 @@ window#waybar {
 }
 
 #network {
-	color: #d08770;
+	color: #81a1c1;
 }
 
 #pulseaudio {
-	color: #ebcb8b;
+	color: #81a1c1;
 	border-radius: 5px 0px 0px 5px;
 }
 

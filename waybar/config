@@ -36,11 +36,11 @@
 	"custom/date": {
     		"format": "󰸗 {}",
 		"interval": 3600,
-		"exec": "/home/james/.bin/waybar-date.sh"
+		"exec": "/home/james/.local/bin/waybar-date.sh"
 	},
 	"custom/power": {
 		"format": "󰐥",
-		"on-click": "/home/james/.bin/waybar-power.sh"
+		"on-click": "/home/james/.local/bin/waybar-power.sh"
 	},
 	"clock": {
 		"format": "󰅐 {:%H:%M}",
