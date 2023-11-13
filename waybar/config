@@ -21,29 +21,29 @@
 	 		"10": []
 	},
          	"format-icons": {
-             		"1": "󰋜",
-             		"2": "󰈹",
-             		"3": "󰠮",
-             		"4": "󰭹",
-             		"5": "󱓷",
-             		"6": "󱇧",
-             		"7": "󰊢",
-             		"8": "󰖲",
-             		"9": "󰕧",
-             		"10": "󰝚"
+             		"1": "\uf120",
+             		"2": "\uf269",
+             		"3": "\uf0e0",
+             		"4": "\uf073",
+             		"5": "\uf249",
+             		"6": "\uf07b",
+             		"7": "\uf144",
+             		"8": "\uf075",
+             		"9": "\uf03d",
+             		"10": "\uf028"
          }
      },
 	"custom/date": {
-    		"format": "󰸗 {}",
+    		"format": "\uf783 {}",
 		"interval": 3600,
 		"exec": "/home/james/.local/bin/waybar-date.sh"
 	},
 	"custom/power": {
-		"format": "󰐥",
+		"format": "\uf011",
 		"on-click": "/home/james/.local/bin/waybar-power.sh"
 	},
 	"clock": {
-		"format": "󰅐 {:%H:%M}",
+		"format": "\uf017 {:%H:%M}",
         	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         	"format-alt": "{:%Y-%m-%d}"
 	},
@@ -53,17 +53,17 @@
             		"critical": 15
         	},
         	"format": "{icon} {capacity}%",
-        	"format-charging": "󰂄 {capacity}%",
-        	"format-plugged": "󰂄{capacity}%",
+        	"format-charging": "\uf241 {capacity}%",
+        	"format-plugged": "\uf240 {capacity}%",
         	"format-alt": "{time} {icon}",
-        	"format-full": "󱈑 {capacity}%",
-        	"format-icons": ["󱊡", "󱊢", "󱊣"]
+        	"format-full": "\uf240 {capacity}%",
+        	"format-icons": ["\uf240", "\uf241", "\uf242"]
 	},
 	"network": {
         	"format-wifi": "  {essid}",
         	"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         	"format-linked": "{ifname} (No IP) ",
-        	"format-disconnected": "󰤮 Disconnected",
+        	"format-disconnected": "  Disconnected",
         	"format-alt": "{ifname}: {ipaddr}/{cidr}"
 	},
 	"pulseaudio": {
