@@ -2,7 +2,7 @@
     "position": "top", 
 	    "height": 42,
 	    "modules-left": ["sway/workspaces"],
-    "modules-right": ["pulseaudio", "network", "battery", "custom/date", "clock", "custom/power"],
+    "modules-right": ["pulseaudio", "network", "battery", "custom/date", "clock"],
     // Modules configuration
 	"sway/workspaces": {
 		"disable-scroll": true,
@@ -21,20 +21,30 @@
 	 		"10": []
 	},
          	"format-icons": {
-             		"1": "\uf120",
+                // terminal
+             		"1": "\uf489",
+                // firefox
              		"2": "\uf269",
-             		"3": "\uf0e0",
+                // email
+             		"3": "\ueb1c",
+                // calendar
              		"4": "\uf073",
-             		"5": "\uf249",
-             		"6": "\uf07b",
-             		"7": "\uf144",
-             		"8": "\uf075",
-             		"9": "\uf03d",
-             		"10": "\uf028"
+                // notes
+             		"5": "\uf4f6",
+                // folder
+             		"6": "\udb80\ude56",
+                // video
+             		"7": "\ueb2c",
+                // chat
+             		"8": "\udb83\udede",
+                // obs
+             		"9": "\uead9",
+                // audio
+             		"10": "\uf025"
          }
      },
 	"custom/date": {
-    		"format": "\uf783 {}",
+    		"format": "{} \uf133",
 		"interval": 3600,
 		"exec": "/home/james/.local/bin/waybar-date.sh"
 	},
@@ -43,7 +53,7 @@
 		"on-click": "/home/james/.local/bin/waybar-power.sh"
 	},
 	"clock": {
-		"format": "\uf017 {:%H:%M}",
+		"format": "{:%H:%M} \uf017",
         	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         	"format-alt": "{:%Y-%m-%d}"
 	},
@@ -61,8 +71,8 @@
 	},
 	"network": {
         	"format-wifi": "  {essid}",
-        	"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        	"format-linked": "{ifname} (No IP) ",
+        	"format-ethernet": "ethernet \udb80\ude00",
+        	"format-linked": "{ifname} (No IP) \udb82\udd2e",
         	"format-disconnected": "  Disconnected",
         	"format-alt": "{ifname}: {ipaddr}/{cidr}"
 	},

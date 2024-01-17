@@ -27,7 +27,7 @@ set $menu wofi --show run
 ### Output configuration
 #
 # wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/james/Pictures/wallpapers/winter-norway.jpg fill
+output * bg /home/james/Pictures/wallpapers/mesa-snow.jpg fill
 
 # styling for windows title bars, padding, etc
 set $dark 3b4252
@@ -38,9 +38,9 @@ client.unfocused $gray $dark $white
 #
 # Example configuration:
 #
-output DP-4 resolution 1920x1080 position 1920,0
-output eDP-1 scale 1
-output eDP-1 resolution 2256x1504 position 0,0
+output HDMI-A-1 resolution 1920x1080 position 1920,0
+#output eDP-1 scale 1
+#output eDP-1 resolution 2256x1504 position 0,0
 #output eDP-1 mode --custom 1920x1080@60HZ 
 # output eDP-1 {
 #	mode 2256x1504@59.999Hz
@@ -51,10 +51,10 @@ output eDP-1 resolution 2256x1504 position 0,0
 #
 # Example configuration:
 #
-set $lock swaylock -f -C /home/james/.config/swaylock/confg
-exec swayidle -w \
-	timeout 300 $lock \
-	before-sleep $lock
+#set $lock swaylock -f -C /home/james/.config/swaylock/confg
+#exec swayidle -w \
+#	timeout 300 $lock \
+#	before-sleep $lock
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
