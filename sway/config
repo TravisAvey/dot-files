@@ -3,7 +3,7 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
-font pango: 'Source Code Pro' Medium 12
+font pango: 'SauceCodePro Nerd Font' Medium 12
 
 ### Variables
 #
@@ -27,20 +27,34 @@ set $menu wofi --show run
 ### Output configuration
 #
 # wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/james/Pictures/wallpapers/mesa-snow.jpg fill
+output * bg /home/james/Pictures/wallpapers/purple-mnts.jpg fill
+
+default_border pixel 2
+titlebar_border_thickness 2
+gaps outer 5
+gaps inner 5
+
+## Window decoration
+# class                 border  backgr. text    indicator child_border
+client.focused          #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
+client.focused_inactive #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
+client.unfocused        #414868 #24283b #a9b1d6 #7dcfff   #414868
+client.urgent           #e0af68 #e0af68 #1d202f #7dcfff   #e0af68
 
 # styling for windows title bars, padding, etc
-set $dark 3b4252
-set $gray 4c566a
-set $white d8dee9
-client.focused $dark $gray $white
-client.unfocused $gray $dark $white
+#set $dark 3b4252
+#set $gray 4c566a
+#set $white d8dee9
+#client.focused $dark $gray $white
+#client.unfocused $gray $dark $white
 #
 # Example configuration:
 #
-output HDMI-A-1 resolution 1920x1080 position 1920,0
-#output eDP-1 scale 1
-#output eDP-1 resolution 2256x1504 position 0,0
+#output DP-7 resolution 3840x2160@60HZ position 1920,0
+output DP-7 mode --custom 3840x2160@60HZ
+#output DP-6 mode --custom 1920x1080@60HZ
+output eDP-1 scale 1
+output eDP-1 resolution 2256x1504 position 0,0
 #output eDP-1 mode --custom 1920x1080@60HZ 
 # output eDP-1 {
 #	mode 2256x1504@59.999Hz
@@ -212,7 +226,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-
 #
 # Status Bar:
 #
@@ -223,3 +236,4 @@ bar {
 # xwayland disable
 include /etc/sway/config.d/*
 
+exec_always 'if grep -q open /proc/acpi/button/lid/LID/state; then swaymsg output eDP-1 enable; else swaymsg output eDP-1 disable; fi'

@@ -1,6 +1,6 @@
 {
     "position": "top", 
-	    "height": 42,
+	    "height": 48,
 	    "modules-left": ["sway/workspaces"],
     "modules-right": ["pulseaudio", "network", "battery", "custom/date", "clock", "custom/power"],
     // Modules configuration
@@ -30,7 +30,7 @@
                 // calendar
              		"4": "\uf073",
                 // notes
-             		"5": "\uf4f6",
+             		"5": "\ueb26",
                 // folder
              		"6": "\udb80\ude56",
                 // video
@@ -62,11 +62,11 @@
             		"warning": 30,
             		"critical": 15
         	},
-        	"format": "{icon} {capacity}%",
-        	"format-charging": "\uf241 {capacity}%",
-        	"format-plugged": "\uf240 {capacity}%",
-        	"format-alt": "{time} {icon}",
-        	"format-full": "\uf240 {capacity}%",
+        	"format": "{icon}  {capacity}%",
+        	"format-charging": "\uf241  {capacity}%",
+        	"format-plugged": "\uf240  {capacity}%",
+        	"format-alt": "{time}  {icon}",
+        	"format-full": "\uf240  {capacity}%",
         	"format-icons": ["\uf240", "\uf241", "\uf242"]
 	},
 	"network": {
